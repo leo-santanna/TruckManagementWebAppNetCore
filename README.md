@@ -2,6 +2,12 @@
 
 A project using .NET Core, EF Core and Unit Tests developed to manage truck fleet data with basic validation based on previously provided documentation.
 
+## Prerequisites
+
+*	Local SQL Server Instance
+*	Visual Studio (project was developed using version 2019) - only needed if you want to see the unit tests in greater detail
+
+
 ## Running the tests
 
 From the terminal, in the project root, simply run:
@@ -22,6 +28,10 @@ From the terminal, in the project root, simply run:
 cd .\TruckManagementWebAppNetCore
 dotnet run
 ```
+
+Now, simply navigate to `http://localhost:5000`
+
+Check for the port in which the project will be executing in your machine. Usually it is on port 5000.
 
 ## Supported .NET SDK and CLI versions
 
