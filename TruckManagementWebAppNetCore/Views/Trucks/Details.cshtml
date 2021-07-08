@@ -1,0 +1,35 @@
+﻿@model TruckManagementWebAppNetCore.Models.Truck
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes do caminhão</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.ManufactureYear)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.ManufactureYear)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.ModelYear)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.ModelYear)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Model.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Alterar</a> |
+    <a asp-action="Index">Voltar para listagem</a>
+</div>

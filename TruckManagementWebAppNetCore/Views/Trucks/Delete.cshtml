@@ -1,0 +1,39 @@
+﻿@model TruckManagementWebAppNetCore.Models.Truck
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Excluir caminhão</h1>
+
+<h3>Você tem certeza que deseja excluir esse caminhão?</h3>
+<div>
+    <hr />
+
+    <dl class="row">
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.ManufactureYear)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.ManufactureYear)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.ModelYear)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.ModelYear)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Model.Name)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar para listagem</a>
+    </form>
+</div>
